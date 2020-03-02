@@ -1,6 +1,6 @@
 import React from 'react';
 import '../assets/styles/Header.scss'
-import logo from '../assets/note.svg'
+import logo from '../assets/sudoku.svg'
 
 const Header = () => {
 
