@@ -6,8 +6,15 @@ body {
 
   .sudoku{
     display: flex;
-    justify-content: space-evenly 
+    justify-content: space-evenly ;
+    flex-wrap: wrap;
   }
+
+  // @media (max-width: 600px) {
+  //   .sudoku {
+     
+  //   }
+  // }
  
 
   .game{
