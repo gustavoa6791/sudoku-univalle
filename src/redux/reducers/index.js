@@ -14,13 +14,11 @@ const reducer = (state, action) => {
 
       lecturaActual[celda] = valor == null ? null : parseInt(valor)
       
-     
       var historia = [...state.historia,[...lecturaActual]]
       var ultimo = historia[historia.length - 1]
       var newHistGraf = [...state.historiaGrafica,[...ingreso]]
       var ubicacion2 = newHistGraf.length
      
-
       return {
         ...state,
         historia: [...state.historia, [...lecturaActual]],
@@ -28,8 +26,6 @@ const reducer = (state, action) => {
         actual: ultimo,
         historiaGrafica: newHistGraf,
         ubicacion2 : ubicacion2
-       
-        
       }
 
     case 'ESTADO_INICIAL':
@@ -50,7 +46,7 @@ const reducer = (state, action) => {
         var pos = state.ubicacion - 1
         var newActual = state.historia
         var newActualAnt = newActual[pos]
-
+        
         var pos2 = state.ubicacion2 -1
         var newHistGraf = [...state.historiaGrafica[pos2 ]]
         var newHistGrafMod = [newHistGraf[0]= "deshacer",newHistGraf[1], newHistGraf[2] ] 
@@ -84,8 +80,6 @@ const reducer = (state, action) => {
           historiaGrafica: [...state.historiaGrafica,[...newHistGrafMod]]
         }
       }
-
-
 
     default:
       return state

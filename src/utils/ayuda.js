@@ -1,58 +1,62 @@
 export default function ayuda(celda, estado) {
 
-  let filaActual = 10;
-  let columActual = 10;
-  let cuadroActual = 10;
-  let arregloValores = [];
+  if (estado[celda] == null) {
+    let filaActual = 10;
+    let columActual = 10;
+    let cuadroActual = 10;
+    let arregloValores = [];
 
-  for (let i = 0; i < fila.length; i++) {
-    let f = fila[i].indexOf(parseInt(celda));
-    if (f !== (-1)) {
-      filaActual = i;
-      for (let e = 0; e < fila[i].length; e++) {
-        if (estado[fila[i][e]] != null) {
-          arregloValores.push(estado[fila[i][e]]);
+    for (let i = 0; i < fila.length; i++) {
+      let f = fila[i].indexOf(parseInt(celda));
+      if (f !== (-1)) {
+        filaActual = i;
+        for (let e = 0; e < fila[i].length; e++) {
+          if (estado[fila[i][e]] != null) {
+            arregloValores.push(estado[fila[i][e]]);
+          }
         }
+        break;
       }
-      break;
     }
-  }
 
-  for (let i = 0; i < colum.length; i++) {
-    let f = colum[i].indexOf(parseInt(celda));
-    if (f !== (-1)) {
-      columActual = i;
-      for (let e = 0; e < colum[i].length; e++) {
-        if (estado[colum[i][e]] != null) {
-          arregloValores.push(estado[colum[i][e]]);
+    for (let i = 0; i < colum.length; i++) {
+      let f = colum[i].indexOf(parseInt(celda));
+      if (f !== (-1)) {
+        columActual = i;
+        for (let e = 0; e < colum[i].length; e++) {
+          if (estado[colum[i][e]] != null) {
+            arregloValores.push(estado[colum[i][e]]);
+          }
         }
+        break;
       }
-      break;
     }
-  }
 
-  for (let i = 0; i < cuadro.length; i++) {
-    let f = cuadro[i].indexOf(parseInt(celda));
-    if (f !== (-1)) {
-      cuadroActual = i;
-      for (let e = 0; e < cuadro[i].length; e++) {
-        if (estado[cuadro[i][e]] != null) {
-          arregloValores.push(estado[cuadro[i][e]]);
+    for (let i = 0; i < cuadro.length; i++) {
+      let f = cuadro[i].indexOf(parseInt(celda));
+      if (f !== (-1)) {
+        cuadroActual = i;
+        for (let e = 0; e < cuadro[i].length; e++) {
+          if (estado[cuadro[i][e]] != null) {
+            arregloValores.push(estado[cuadro[i][e]]);
+          }
         }
+        break
       }
-      break
     }
-  }
 
-  let numero = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-  let numerosAyuda = [];
+    let numero = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    let numerosAyuda = [];
 
-  for (let i = 0; i < numero.length; i++) {
-    arregloValores.indexOf(numero[i]) ==(-1) ? numerosAyuda.push( numero[i]) : '';
+    for (let i = 0; i < numero.length; i++) {
+      arregloValores.indexOf(numero[i]) == (-1) ? numerosAyuda.push(numero[i]) : '';
+    }
+    console.log('numerosValidos: ', numerosAyuda);
+
+    return numerosAyuda;
   }
-  console.log('numerosValidos: ', numerosAyuda);
-  
-  return numerosAyuda;
+  return false
+
 }
 
 const fila = [

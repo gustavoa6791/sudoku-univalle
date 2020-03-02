@@ -21,36 +21,25 @@ class Tablero extends Component {
 				ingreso: ["nueva", e.target.name, e.target.value]
       })
     } else {
-      alert(`este numero ya se encontraba en la fila, 
-      columna o cuadro correspondiente a la celda`);
+      alert(`este numero ya se encontraba en la fila, columna o cuadro correspondiente a la celda`);
       e.target.value = null
 		}
 		
 		setTimeout(() => {
-
 			const c = completado(this.props.actual, this.props.resuelto);
-
 
 			if ( c[0] ) {
 				if (c[1].length == 0) {
 					alert("este juego se ha completado, sin errores")
 				} else {
-					alert(`este juego se ha completado, 
-					con errores en las celdas ${c[1]}`)
+					alert(`este juego se ha completado, con errores en las celdas ${c[1]}`)
 				}
 			}
-	
-			
 		}, 500);
-
-
-    
-
   }
 
   render() {
     return (
-      <div>
         <div className="tablero">
           {
             this.props.juegoactual.map((value, index) => {
@@ -66,10 +55,8 @@ class Tablero extends Component {
             })
           }
         </div>
-      </div>
     )
   }
-
 }
 
 const mapStateToProps = (state) => {

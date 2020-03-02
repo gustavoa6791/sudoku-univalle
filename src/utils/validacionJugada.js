@@ -43,9 +43,6 @@ export  function jugadaInvalida(celda, valor, estado) {
     }
   }
 
-  
-  
-
   return [filaError, columError, cuadroError, celdaError]
 }
 

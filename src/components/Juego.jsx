@@ -18,7 +18,6 @@ class Juego extends Component {
     this.setState({
       casilla: e.target.name
     })
-
   }
 
   handle(e) {
@@ -34,47 +33,39 @@ class Juego extends Component {
             document.getElementById(i.toString()).disabled = true
             document.getElementById(i.toString()).className += " inicial"
           }
-
         }
       })
-
-
-
   }
 
   handleClick1() {
     if (this.props.posicion > 1) {
-      this.props.deshacerRehacer("deshacer");
+      this.props.deshacerRehacer("deshacer")
     }
   }
 
   handleClick2() {
     if (this.props.posicion < (this.props.historia.length) - 1) {
-      this.props.deshacerRehacer("rehacer");
+      this.props.deshacerRehacer("rehacer")
     }
   }
 
   handleClick3(event) {
     const numerosAyuda = ayuda(this.state.casilla, this.props.actual)
-    alert(`Los numeros que puedes ingresar son ${numerosAyuda}`)
-
+    if (numerosAyuda != false) {
+      alert(`Los numeros que puedes ingresar son ${numerosAyuda}`)
+    }
   }
 
   render() {
 
-    var  jugadaslist = ""
+    var jugadaslist = ""
 
     for (let i = 0; i < this.props.jugadas.length; i++) {
       jugadaslist = `tipo de entrada: ${this.props.jugadas[i][0]}, en celda ${parseInt(this.props.jugadas[i][1]) + 1}, con valor ${this.props.jugadas[i][2]} \n` + jugadaslist
-
-
     }
-    if ( document.getElementById("jugadas") != null) {
+    if (document.getElementById("jugadas") != null) {
       document.getElementById("jugadas").value = jugadaslist
-      
     }
-
-    
 
     return (
       <div className="sudoku">
@@ -89,24 +80,17 @@ class Juego extends Component {
           />
 
           <div className="controles">
-            <button onClick={() => this.handleClick1()}>Deshacer</button>
-            <button onClick={() => this.handleClick2()}>Rehacer</button>
-            <button onClick={() => this.handleClick3(event)}>Ayuda</button>
+            <button className="button" id="deshacer" onClick={() => this.handleClick1()}>Deshacer</button>
+            <button className="button" id="rehacer" onClick={() => this.handleClick2()}>Rehacer</button>
+            <button className="button" id="ayuda" onClick={() => this.handleClick3(event)}>Ayuda</button>
           </div>
-
-
-
         </div>
 
         <div className="jugadas">
-
           <textarea className="jugadas" id="jugadas" ></textarea>
-
         </div>
 
-
       </div>
-
     )
   }
 }

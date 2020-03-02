@@ -39,9 +39,7 @@ export function leerArchivo(e) {
 
     function invalid(e) {
       return e !== 10 && e !== 13;
-
     }
-
   });
 }
 

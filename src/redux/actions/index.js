@@ -5,7 +5,6 @@ export const ingresoValor = paylod =>({
     paylod,
 })
 
-
 export const estadoInicial = paylod =>({
     type:'ESTADO_INICIAL',
     paylod,

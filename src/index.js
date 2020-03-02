@@ -9,9 +9,6 @@ import { createStore, compose } from 'redux'
 import reducer from './redux/reducers/index'
 import {initialState} from './redux/initialState'
 
-
-
-
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 const store = createStore(reducer, initialState, composeEnhancers())
 
