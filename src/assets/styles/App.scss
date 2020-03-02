@@ -1,0 +1,107 @@
+body {
+    font: 14px "Century Gothic", Futura, sans-serif;
+    margin: 20px;
+    
+  }
+
+  .sudoku{
+    display: flex;
+    justify-content: space-evenly 
+  }
+ 
+
+  .game{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+ 
+  
+
+  .game > div{
+    margin-top: 30px;
+    
+  }
+  
+  
+
+  
+  .celda {
+    background: #fff;
+    border: 1px solid #999;
+    float: left;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 34px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 45px;
+    height: 45px;
+  
+
+    
+  }
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+}
+
+  .inicial{
+    background: rgb(204, 204, 204);
+  }
+
+  .celda:nth-child(3n ) {
+    border-right: 3px black solid;
+    width: 41px;
+  }
+
+  .celda:nth-child(3n+1 ) {
+    border-left: 3px black solid;
+  }
+
+  .celda:nth-child(n+28):nth-child(-n+36) {
+    border-top: 3px black solid;
+  }
+  .celda:nth-child(n+19):nth-child(-n+27) {
+    border-bottom: 3px black solid;
+  }
+
+  .celda:nth-child(n+46):nth-child(-n+54) {
+    border-bottom: 3px black solid;
+  }
+  .celda:nth-child(n+55):nth-child(-n+63) {
+    border-top: 3px black solid;
+  }
+  
+  
+  .celda:focus {
+    outline: none;
+  }
+  
+  .kbd-navigation .celda:focus {
+    background: #ddd;
+  }
+  
+  .tablero {
+    
+    display: grid;
+    grid-template-columns: repeat( 9, 45px);
+    grid-template-rows: repeat( 9, 45px);
+    
+   
+  }
+
+  
+  .jugadas{
+    margin: 40px 0 0 0;
+  }
+ 
+  #jugadas{
+    resize: vertical;
+  }
