@@ -100,7 +100,7 @@ class Juego extends Component {
 
         <div className="jugadas">
 
-          <textarea className="jugadas" id="jugadas" cols="55" rows="10"></textarea>
+          <textarea className="jugadas" id="jugadas" ></textarea>
 
         </div>
 
