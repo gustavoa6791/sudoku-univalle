@@ -10,6 +10,8 @@ const AppJuego = () => {
         <div>
             <Header/>
            <Juego/>
+
+          
         </div>
     );
 }

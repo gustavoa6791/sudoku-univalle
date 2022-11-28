@@ -7,10 +7,13 @@ import ayuda from '../utils/ayuda'
 
 class Juego extends Component {
 
+
+
   constructor(props) {
     super(props)
     this.state = {
-      casilla: ""
+      casilla: "",
+      initial: ".6.982...\n...3....1\n.7..14.6.\n2........\n..1..9.4.\n......987\n.3.......\n8......7.\n9.76.8.23"
     }
   }
 
@@ -88,7 +91,24 @@ class Juego extends Component {
 
         <div className="jugadas">
           <textarea className="jugadas" id="jugadas" ></textarea>
+
+          <br />
+          <br />
+          <br />
+
+        <div>
+          {}
+          Para iniciar el juego puedes generar un archivo .txt 
+          con el <br />siguiente formato donde el punto significa un  
+          espacio <br /> vacio. o generar uno desde <a href="https://qqwing.com/generate.html" target="_blank">QQWIng - Generator</a> (Output format:CSV) <br /><br /><br />
+          <textarea  readOnly rows='10' cols='10' value={this.state.initial}>
+         </textarea>
+          
         </div>
+
+        </div>
+
+ 
 
       </div>
     )
