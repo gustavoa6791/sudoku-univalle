@@ -4,9 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --mode production",
-    "start": "webpack-dev-server --open --mode development"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "test-old": "echo \"Error: no test specified\" && exit 1",
+    "build-old": "webpack --mode production",
+    "start-old": "webpack-dev-server --open --mode development"
   },
   "keywords": [],
   "author": "",
@@ -17,7 +21,8 @@
     "react-redux": "^7.1.3",
     "react-router-dom": "^5.1.2",
     "redux": "^4.0.5",
-    "sudoku-solver-js": "^0.1.4"
+    "sudoku-solver-js": "^0.1.4",
+    "react-scripts": "5.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.8.4",
@@ -34,5 +39,17 @@
     "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10",
     "webpack-dev-server": "^3.10.1"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
